@@ -31,8 +31,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn mr-3">Sign In</a>
-    <a className="btn">Sign Up</a>
+    <a className="btn mr-3 bg-green-500 text-white font-bold">Sign In</a>
+    <a className="btn bg-blue-400 text-white font-bold">Sign Up</a>
   </div>
 </div>
 <div className='border border-t-2 border-gray-100'>
