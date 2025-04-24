@@ -3,11 +3,13 @@ import React from 'react';
 const Navbar = () => {
     const links=<>
     <li className='m-2'>Home</li>
-    <li className='m-2'>About</li>
+    <li className='m-2'>Listed Books</li>
+    <li className='m-2'>Pages to Read</li>
 
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div>
+          <div className="navbar bg-base-100 w-11/12 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,7 +23,7 @@ const Navbar = () => {
         }
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">Book Vibe</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -29,9 +31,13 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn mr-3">Sign In</a>
+    <a className="btn">Sign Up</a>
   </div>
 </div>
+<div className='border border-t-2 border-gray-100'>
+</div>
+        </div>
     );
 };
 
