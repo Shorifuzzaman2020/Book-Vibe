@@ -15,11 +15,14 @@ const Books = () => {
 
     return (
         <div>
-            <p>This is books page</p>
-            {bookdata.map(book => (
-                <Book key={book.id} book={book} />
-            ))}
-            
+            <p className='text-4xl font-bold text-center my-4'>Books</p>
+            <div className="flex justify-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {bookdata.map(book => (
+                    <Book key={book.id} book={book} />
+                    ))}
+                </div>
+                </div>
         </div>
     );
 };
