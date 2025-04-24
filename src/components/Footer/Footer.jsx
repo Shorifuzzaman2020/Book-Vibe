@@ -4,24 +4,23 @@ const Footer = () => {
     return (
         <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
   <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
+    <h6 className="footer-title">Contact Us</h6>
+    <a className="link link-hover">Phone:0198292929</a>
+    <a className="link link-hover">Email: soil@gmail.com</a>
+    <a className="link link-hover">Address: Road-10, House-10,Sector-10,Uttara,Dhaka</a>
   </nav>
   <nav>
-    <h6 className="footer-title">Company</h6>
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
+    <h6 className="footer-title">Book Category</h6>
+    <a className="link link-hover">Fiction</a>
+    <a className="link link-hover">History</a>
+    <a className="link link-hover">Science</a>
+    <a className="link link-hover">Drama</a>
   </nav>
   <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
+    <h6 className="footer-title">Discover</h6>
+    <a className="link link-hover">Home</a>
+    <a className="link link-hover">Books</a>
+    <a className="link link-hover">Collections</a>
   </nav>
 </footer>
     );
