@@ -39,7 +39,7 @@ const addToStoredWishListDB=(id)=>{
         localStorage.setItem("wishList",data);
         MySwal.fire({
             title: "Good job!",
-            text: "You successfully this book added to the readlist!",
+            text: "You successfully this book added to the Wish list!",
             icon: "success"
           });
     }
@@ -63,7 +63,7 @@ const addToStoredDB=(id)=>{
         localStorage.setItem("readList",data);
         MySwal.fire({
             title: "Good job!",
-            text: "You successfully this book added to the readlist!",
+            text: "You successfully this book added to the read list!",
             icon: "success"
           });
     }
