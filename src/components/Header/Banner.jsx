@@ -10,7 +10,7 @@ const Banner = () => {
                     <Link to='/listedBook'><button className='bg-green-500 text-white font-bold px-4 py-2 rounded-sm hover:cursor-pointer'>View The List</button></Link>
                 </div>
                 <div>
-                    <img src="/src/assets/images.jpeg" alt="" /> 
+                    <img src="/images.jpeg" alt="" /> 
                 </div>
             </div>
         </div>
