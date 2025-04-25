@@ -64,7 +64,7 @@ const ReadList = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                <div className='flex justify-center w-11/12 mx-auto'>
+                <div className='flex justify-center w-11/12 mx-auto mb-4'>
                         <div className='grid lg:grid-cols-3 gap-5'>
                             {
                                 wishList.map(bw => <Book key={bw.bookId} book={bw}></Book>)
