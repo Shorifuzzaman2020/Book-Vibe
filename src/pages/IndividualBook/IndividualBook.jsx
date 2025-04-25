@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { addToStoredDB } from '../../Utility/addToDB';
 
 const IndividualBook = () => {
     const { id } = useParams();
@@ -8,6 +9,10 @@ const IndividualBook = () => {
     // console.log(data);
     const singleData = data.find(book => book.bookId === bookID);
     console.log(singleData);
+    const handleMarkAsRead=(id)=>{
+        addToStoredDB(id);
+    }
+
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-sm w-11/12 mx-auto p-10">
@@ -34,8 +39,8 @@ const IndividualBook = () => {
                     <p>Rating: {singleData.rating}</p>
 
                     <div className="card-actions">
-                        <button className="btn">Read</button>
-                        <button className="btn btn-primary">Wishlist</button>
+                        <button onClick={()=>handleMarkAsRead(id)} className="btn">Mark as Read</button>
+                        <button className="btn btn-primary">Add to Wishlist</button>
                     </div>
                 </div>
             </div>
