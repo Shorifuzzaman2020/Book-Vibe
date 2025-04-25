@@ -9,11 +9,11 @@ const Book = ({ book }) => {
         <div>
             <Link to={`/individualBook/${book.bookId}`}>
             <div className="card bg-base-100 w-96 shadow-sm">
-                <figure className="px-10 pt-10">
+                <figure className="px-10 pt-10 py-5 bg-gray-200">
                     <img
                     src={book.image}
                     alt={book.bookName}
-                    className="rounded-xl h-60 w-full object-cover"
+                    className="h-60 w-40"
                     />
                 </figure>
                 <div className="card-body p-10 text-center">

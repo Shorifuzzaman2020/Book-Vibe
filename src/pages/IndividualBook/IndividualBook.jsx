@@ -1,27 +1,30 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { addToStoredDB } from '../../Utility/addToDB';
+import { addToStoredDB, addToStoredWishListDB } from '../../Utility/addToDB';
+
 
 const IndividualBook = () => {
     const { id } = useParams();
     const bookID = parseInt(id);
     const data = useLoaderData();
-    // console.log(data);
+    
     const singleData = data.find(book => book.bookId === bookID);
     console.log(singleData);
     const handleMarkAsRead=(id)=>{
         addToStoredDB(id);
     }
-
+    const handleWishList=(id)=>{
+        addToStoredWishListDB(id);
+    }
     return (
         <div>
-            <div className="card lg:card-side bg-base-100 shadow-sm w-11/12 mx-auto p-10">
-                <figure className='w-[100%] bg-gray-200 rounded-lg p-32'>
+            <div className="card lg:card-side bg-base-100 shadow-sm w-11/12 mx-auto lg:p-10">
+                <figure className='w-[100%] bg-gray-200 rounded-lg p-16 lg:p-32'>
                     <img
                         src={singleData.image}
                         alt="Album" />
                 </figure>
-                <div className="card-body px-12">
+                <div className="card-body lg:px-12">
                     <h2 className="card-title text-4xl">{singleData.bookName}</h2>
                     <p className='font-bold my-3'>By: {singleData.author}</p>
                     <div className='border-y'>
@@ -37,10 +40,9 @@ const IndividualBook = () => {
                     <p>Publisher: {singleData.publisher}</p>
                     <p>Year of Publishing: {singleData.yearOfPublishing}</p>
                     <p>Rating: {singleData.rating}</p>
-
                     <div className="card-actions">
                         <button onClick={()=>handleMarkAsRead(id)} className="btn">Mark as Read</button>
-                        <button className="btn btn-primary">Add to Wishlist</button>
+                        <button onClick={()=>handleWishList(id)} className="btn btn-primary">Add to Wishlist</button>
                     </div>
                 </div>
             </div>
